@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryAutomation.BAL\LibraryAutomation.BAL.csproj" />
+    <ProjectReference Include="..\LibraryAutomation.DAL\LibraryAutomation.DAL.csproj" />
+    <ProjectReference Include="..\LibraryAutomation.Domain\LibraryAutomation.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="sr_en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>sr_en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="sr_tr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>sr_tr.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="sr_en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>sr_en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="sr_tr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>sr_tr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
